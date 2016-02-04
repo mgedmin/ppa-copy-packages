@@ -369,7 +369,7 @@ def process_packages(lp, dry_run):
                     if builds:
                         if builds[0].buildstate == 'Currently building':
                             any_pending.add((name, version, 'building'))
-                        log.info("  but it isn't built yet (state: %s) - %s",
+                        log.info("  but binaries aren't published yet (state: %s) - %s",
                                  builds[0].buildstate, builds[0].web_link)
             elif source.status != 'Published':
                 any_pending.add((name, version, '%s in %s' %
@@ -379,7 +379,7 @@ def process_packages(lp, dry_run):
             elif not lp.has_published_binaries(name, version, target_series_name):
                 builds = lp.get_builds_for(name, version, target_series_name)
                 if builds:
-                    notices.append("  but it isn't built yet for %s (state: %s) - %s" %
+                    notices.append("  but binaries aren't published yet for %s (state: %s) - %s" %
                                    (target_series_name, builds[0].buildstate,
                                    builds[0].web_link))
         if not mentioned or notices:
