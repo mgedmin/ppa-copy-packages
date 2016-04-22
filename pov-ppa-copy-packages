@@ -1,5 +1,5 @@
 #!/usr/bin/python
-"""Copy published precise PPA packages to lucid.
+"""Copy published PPA packages from one release pocket to another.
 
 We build a few packages containing scripts (architecture: all).  We want them
 to be available for all supported Ubuntu releases.  So we upload to the oldest
