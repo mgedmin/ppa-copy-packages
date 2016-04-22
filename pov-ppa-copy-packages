@@ -52,7 +52,7 @@ PACKAGE_WHITELIST = [
 ]
 
 SOURCE_SERIES = 'precise'
-TARGET_SERIESES = ['trusty', 'vivid', 'wily']
+TARGET_SERIESES = ['trusty', 'vivid', 'wily', 'xenial']
 ARCHITECTURES = ['i386', 'amd64']
 POCKET = 'Release'
 
