@@ -37,7 +37,7 @@ except ImportError:
 
 
 __author__ = 'Marius Gedminas <marius@pov.lt>'
-__version__ = '1.4.2'
+__version__ = '1.4.3'
 
 
 #
@@ -51,8 +51,11 @@ PACKAGE_WHITELIST = [
     'pov-server-page', 'pov-simple-backup',
 ]
 
-SOURCE_SERIES = 'precise'
-TARGET_SERIESES = ['trusty', 'vivid', 'wily', 'xenial']
+SOURCE_SERIES = 'precise'  # aka 12.04 LTS
+TARGET_SERIESES = [
+    'trusty',  # aka 14.04 LTS
+    'xenial',  # aka 16.06 LTS
+]
 ARCHITECTURES = ['i386', 'amd64']
 POCKET = 'Release'
 
