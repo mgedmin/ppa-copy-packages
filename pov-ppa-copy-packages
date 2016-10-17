@@ -54,7 +54,8 @@ PACKAGE_WHITELIST = [
 SOURCE_SERIES = 'precise'  # aka 12.04 LTS
 TARGET_SERIESES = [
     'trusty',  # aka 14.04 LTS
-    'xenial',  # aka 16.06 LTS
+    'xenial',  # aka 16.04 LTS
+    'yakkety', # aka 16.10
 ]
 ARCHITECTURES = ['i386', 'amd64']
 POCKET = 'Release'
