@@ -56,6 +56,7 @@ TARGET_SERIESES = [
     'trusty',  # aka 14.04 LTS
     'xenial',  # aka 16.04 LTS
     'yakkety', # aka 16.10
+    'zesty',   # aka 17.04
 ]
 ARCHITECTURES = ['i386', 'amd64']
 POCKET = 'Release'
