@@ -37,7 +37,7 @@ except ImportError:
 
 
 __author__ = 'Marius Gedminas <marius@pov.lt>'
-__version__ = '1.5.0'
+__version__ = '1.5.1'
 
 
 #
@@ -379,6 +379,8 @@ def process_packages(lp, dry_run):
                     if builds:
                         if builds[0].buildstate == 'Currently building':
                             any_pending.add((name, version, 'building'))
+                        elif builds[0].buildstate == 'Uploading build':
+                            any_pending.add((name, version, 'uploading'))
                         elif builds[0].buildstate == 'Successfully built':
                             any_pending.add((name, version, 'publishing'))
                         log.info("  but binaries aren't published yet (state: %s) - %s",
