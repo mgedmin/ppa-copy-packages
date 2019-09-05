@@ -8,7 +8,11 @@ from setuptools import setup
 
 here = os.path.dirname(__file__)
 with open(os.path.join(here, "README.rst")) as f:
-    long_description = f.read()
+    readme = f.read()
+with open(os.path.join(here, "CHANGES.rst")) as f:
+    changelog = f.read()
+
+long_description = readme + "\n\n" + changelog
 
 metadata = {}
 with open(os.path.join(here, "ppa_copy_packages.py")) as f:
