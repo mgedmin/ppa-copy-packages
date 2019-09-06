@@ -1,7 +1,7 @@
 Changelog
 ==========
 
-1.9.1 (unreleased)
+1.9.1 (2019-09-06)
 ------------------
 
 - Fix TypeError: unhashable type: 'Entry'.
