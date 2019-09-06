@@ -157,7 +157,6 @@ class LaunchpadWrapper(object):
         # self.get_series.cache can be kept
         self.get_published_sources.cache.clear()
         self.get_published_binaries.cache.clear()
-        self.get_builds_for_source.cache.clear()
         self.get_source_packages.cache.clear()
         self.get_usable_sources.cache.clear()
 
@@ -211,7 +210,6 @@ class LaunchpadWrapper(object):
         return self.ppa.getPublishedBinaries(distro_arch_series=series,
                                              status="Published")
 
-    @cache
     def get_builds_for_source(self, source):
         log.debug("Listing %s builds for %s %s...",
                   source.distro_series_link.rpartition('/')[-1],
