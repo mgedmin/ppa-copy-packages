@@ -4,7 +4,8 @@ Changelog
 1.9.2 (unreleased)
 ------------------
 
-- Nothing changed yet.
+- Fix ValueError: Namespace GnomeKeyring not available (`GH #3
+  <https://github.com/mgedmin/ppa-copy-packages/pull/3>`_).
 
 
 1.9.1 (2019-09-06)
