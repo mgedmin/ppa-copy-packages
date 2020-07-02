@@ -26,7 +26,7 @@ try:
     # produced by Launchpad.login_with() on Ubuntu 15.10 (+ gnome3-staging PPA)
     import gi
     gi.require_version('GnomeKeyring', '1.0')
-except ImportError:
+except (ImportError, ValueError):
     pass
 
 
