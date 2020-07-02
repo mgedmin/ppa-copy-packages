@@ -1,7 +1,7 @@
 Changelog
 ==========
 
-1.9.2 (unreleased)
+1.9.2 (2020-07-02)
 ------------------
 
 - Fix ValueError: Namespace GnomeKeyring not available (`GH #3
