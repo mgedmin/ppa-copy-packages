@@ -349,7 +349,9 @@ def process_packages(lp, dry_run, packages, source_series, target_series,
                 else:
                     builds = lp.get_builds_for(name, version, source_series)
                     if builds:
-                        if builds[0].buildstate == 'Currently building':
+                        if builds[0].buildstate == 'Needs building':
+                            any_pending.add((name, version, 'needs building'))
+                        elif builds[0].buildstate == 'Currently building':
                             any_pending.add((name, version, 'building'))
                         elif builds[0].buildstate == 'Uploading build':
                             any_pending.add((name, version, 'uploading'))
