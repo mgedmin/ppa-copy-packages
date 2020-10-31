@@ -3,8 +3,8 @@ all:
 	@echo "Nothing to build."
 
 
-.PHONY: test check
-test check:
+.PHONY: test
+test:
 	@echo "No tests yet :("
 
 
