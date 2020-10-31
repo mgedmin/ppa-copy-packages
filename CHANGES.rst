@@ -1,7 +1,7 @@
 Changelog
 ==========
 
-1.9.3 (unreleased)
+1.9.3 (2020-10-31)
 ------------------
 
 - Handle 'needs building' state when using --wait.
