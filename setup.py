@@ -31,6 +31,7 @@ setup(
     url=metadata["__url__"],
     description="Copy Ubuntu PPA packages from one release pocket to another",
     long_description=long_description,
+    long_description_content_type='text/x-rst',
     keywords="ubuntu ppa launchpad copy automation",
     classifiers=[
         "Development Status :: 4 - Beta",
