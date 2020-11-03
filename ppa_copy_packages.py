@@ -300,6 +300,7 @@ class LaunchpadWrapper(object):
 
     def perform_queued_copies(self, dry_run=False):
         first = True
+        any_pending = set()
         for (src_series, target_series, pocket), names in self.queue.items():
             if not names:
                 continue
@@ -321,6 +322,9 @@ class LaunchpadWrapper(object):
                                      to_pocket=pocket,
                                      include_binaries=True,
                                      source_names=sorted(names))
+                for name in names:
+                    any_pending.add((name, None, 'just copied'))
+        return any_pending
 
 
 def get_ppa_url(owner, name):
@@ -381,7 +385,7 @@ def process_packages(lp, dry_run, packages, source_series, target_series,
             for notice in notices:
                 log.info(notice)
 
-    lp.perform_queued_copies(dry_run=dry_run)
+    any_pending.update(lp.perform_queued_copies(dry_run=dry_run))
     return any_pending
 
 
