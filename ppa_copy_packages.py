@@ -315,7 +315,8 @@ class LaunchpadWrapper(object):
                 # makes the method fail with a 503 error.
                 for name in sorted(names):
                     self.sync_sources(target_series, pocket, [name])
-                    any_pending.add((name, None, 'just copied'))
+                    any_pending.add((name, '', 'just copied'))
+        self.queue.clear()
         return any_pending
 
     def sync_sources(self, target_series, pocket, names):
