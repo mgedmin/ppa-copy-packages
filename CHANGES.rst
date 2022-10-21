@@ -1,7 +1,7 @@
 Changelog
 ==========
 
-1.9.4 (unreleased)
+1.9.4 (2022-10-21)
 ------------------
 
 - Copy packages one by one to avoid Launchpad timeouts.
