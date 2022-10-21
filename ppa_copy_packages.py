@@ -311,20 +311,27 @@ class LaunchpadWrapper(object):
                 log.warning("Would copy %s to %s", ', '.join(sorted(names)),
                             target_series)
             else:
-                log.warning("Copying %s to %s", ', '.join(sorted(names)),
-                            target_series)
-                # DEPRECATED: syncSource and syncSources are deprecated, and
-                # will be removed entirely in the future. Use the asynchronous
-                # copyPackage method instead, and poll getPublishedSources if
-                # you need to await completion
-                self.ppa.syncSources(from_archive=self.ppa,
-                                     to_series=target_series,
-                                     to_pocket=pocket,
-                                     include_binaries=True,
-                                     source_names=sorted(names))
-                for name in names:
+                # Another thing: copying too many packages one by one
+                # makes the method fail with a 503 error.
+                for name in sorted(names):
+                    self.sync_sources(target_series, pocket, [name])
                     any_pending.add((name, None, 'just copied'))
         return any_pending
+
+    def sync_sources(self, target_series, pocket, names):
+        log.warning("Copying %s to %s", ', '.join(sorted(names)),
+                    target_series)
+        # DEPRECATED: syncSource and syncSources are deprecated, and
+        # will be removed entirely in the future. Use the asynchronous
+        # copyPackage method instead, and poll getPublishedSources if
+        # you need to await completion.
+        # BTW the 'copyPackage()' method is not mentioned anywhere in
+        # the API docs at https://launchpad.net/+apidoc/1.0.html so...
+        self.ppa.syncSources(from_archive=self.ppa,
+                             to_series=target_series,
+                             to_pocket=pocket,
+                             include_binaries=True,
+                             source_names=sorted(names))
 
 
 def get_ppa_url(owner, name):
