@@ -4,7 +4,10 @@ Changelog
 1.9.4 (unreleased)
 ------------------
 
-- Nothing changed yet.
+- Copy packages one by one to avoid Launchpad timeouts.
+- Do not copy the same packages more than once when using --wait.
+- Fix TypeError: '<' not supported between instances of 'str' and 'NoneType'
+  when using --wait.
 
 
 1.9.3 (2020-10-31)
