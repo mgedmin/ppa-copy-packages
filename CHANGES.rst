@@ -4,7 +4,9 @@ Changelog
 1.9.5 (unreleased)
 ------------------
 
-- Nothing changed yet.
+- Do not ignore --wait when also using --dry-run; this makes it possible for me
+  to wait until a PPA package is published even if I don't want to actually
+  copy it anywhere.
 
 
 1.9.4 (2022-10-21)

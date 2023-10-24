@@ -492,7 +492,7 @@ def _main():
                                        target_series=args.target_series,
                                        architectures=args.architectures,
                                        pocket=args.pocket)
-        if args.wait and any_pending and not args.dry_run:
+        if args.wait and any_pending:
             reasons = dict((name, reason)
                            for name, version, reason in sorted(any_pending))
             log.warning("\nWaiting for %s: sleeping for %d seconds\n",
