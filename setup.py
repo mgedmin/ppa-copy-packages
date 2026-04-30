@@ -57,7 +57,7 @@ setup(
     py_modules=["ppa_copy_packages"],
     zip_safe=False,
     install_requires=[
-        "launchpadlib",
+        "launchpadlib[keyring]",
     ],
     extras_require={},
     entry_points={

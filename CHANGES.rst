@@ -7,6 +7,7 @@ Changelog
 - Do not ignore --wait when also using --dry-run; this makes it possible for me
   to wait until a PPA package is published even if I don't want to actually
   copy it anywhere.
+- Explicitly depend on launchpadlib[keyring].
 
 
 1.9.4 (2022-10-21)
