@@ -31,8 +31,8 @@ except (ImportError, ValueError):
 
 
 APP_NAME = 'ppa-copy-packages'
-__author__ = 'Marius Gedminas <marius@pov.lt>'
-__version__ = '1.9.5.dev0'
+__author__ = 'Marius Gedminas <marius@gedmin.as>'
+__version__ = '2.0.0.dev0'
 __url__ = 'https://github.com/mgedmin/ppa-copy-packages'
 
 

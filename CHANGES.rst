@@ -1,13 +1,15 @@
 Changelog
 ==========
 
-1.9.5 (unreleased)
+2.0.0 (unreleased)
 ------------------
 
 - Do not ignore --wait when also using --dry-run; this makes it possible for me
   to wait until a PPA package is published even if I don't want to actually
   copy it anywhere.
 - Explicitly depend on launchpadlib[keyring].
+- Drop Python 2 compatibility.
+- Drop Python < 3.10 compatibility.
 
 
 1.9.4 (2022-10-21)
