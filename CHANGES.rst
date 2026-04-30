@@ -1,7 +1,7 @@
 Changelog
 ==========
 
-2.0.0 (unreleased)
+2.0.0 (2026-04-30)
 ------------------
 
 - Do not ignore --wait when also using --dry-run; this makes it possible for me
